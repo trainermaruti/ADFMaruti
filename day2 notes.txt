@@ -1,0 +1,72 @@
+Azure Storage
+-Blob 
+-Access level - private, blob, container
+
+Azure SQL database
+
+Azure Data factory == ETL
+linkedservice - connection to data store  4
+dataset - schema and format of the data 5
+activity - task to perform 2
+pipeline - set of activities 3
+
+Lab1 - Blob_to_SQL
+Source -------------------- ADF-pipeline --------------------- Sink
+Blob-storage                                                   Azure SQL DB
+input.txt                                                      Student
+East-US                                                        West-US-2
+
+
+Lab2
+
+Source -------------------- ADF-pipeline --------------------- Sink
+Azure SQL DB                                                   Blob-storage 
+Student                                                        output.json
+4 records                                                        
+
+
+Lab3
+
+Source -------------------- ADF-pipeline --------------------- Sink
+Blob-storage                                                    Blob-storage 
+Allfiles                                                        onlytextfiles
+                                                      
+
+Azure Key Vault -- ?
+Key
+Secret
+Certificate
+
+
+
+Lab4
+
+Source ---------AKV-------- ADF-pipeline ------AKV--------------- Sink
+Blob-storage                                                    Blob-storage 
+Allfiles                                                        onlytextfiles
+
+Step-1:Create Key vault
+Step-2:Create Storage account connection secret in AKV
+Step-3:Create AKV linkedservice in ADF
+Step-4:Create access policy in AKV for ADF using managed identity **
+Step-5:create new LS with AKV
+step-6:associated new LS with our DS
+
+Lab5
+
+Source ---------AKV-------- ADF-pipeline ---------------------- Sink
+Blob-storage                                                    DataLake-Blob-storage 
+Allfiles                                                        onlytextfiles
+east-US                                                         west-US                                                        
+
+
+
+
+
+
+
+
+
+
+
+
