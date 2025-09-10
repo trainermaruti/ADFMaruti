@@ -1,0 +1,44 @@
+CREATE TABLE dbo.Employee
+(
+	ID INT NOT NULL PRIMARY KEY IDENTITY, 
+    FirstName VARCHAR(50), 
+    LastName VARCHAR(50),
+    City VARCHAR(50)
+)
+
+
+INSERT INTO Employee (FirstName, LastName, City) VALUES ('Maruti','Makwana','Ahmedabad')
+INSERT INTO Employee (FirstName, LastName, City) VALUES ('Rahul','Sharma','Delhi'),('Megha','Singh','mumbai');
+
+Select * from dbo.Employee
+
+CREATE TABLE dbo.Employee_Dest
+(
+	ID INT NOT NULL PRIMARY KEY IDENTITY, 
+    FirstName VARCHAR(50), 
+    LastName VARCHAR(50),
+    City VARCHAR(50)
+)
+
+CREATE TABLE dbo.City
+(
+	ID INT NOT NULL PRIMARY KEY IDENTITY, 
+    CityName VARCHAR(50)
+    
+)
+
+insert into dbo.City Values('Ahmedabad'),('mumbai')
+
+select distinct CityName from dbo.City
+
+Select distinct City from dbo.Employee
+
+
+Create procedure dbo.prc_LoadEmployeeDest
+@City varchar(50)
+as
+BEGIN
+Select * from dbo.Employee where City=@City
+END
+
+Exec dbo.prc_LoadEmployeeDest 'mumbai'
