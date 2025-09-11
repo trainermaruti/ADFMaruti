@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "Maruti",
+    "skills": [ ".Net", "Azure" ],
+    "Address": {
+      "state": "Gujarat",
+      "country": "India",
+      "zipcode": "382481"
+    },
+    "Contact": {
+      "phone": "+91-9998114148",
+      "email": "maruti_makwana@hotmail.com"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Rahul",
+    "skills": [ "Java", "DevOps" ],
+    "Address": {
+      "state": "Maharastra",
+      "country": "India",
+      "zipcode": "400004"
+    },
+    "Contact": {
+      "phone": "+91-9998525252",
+      "email": "rahulji356@gmail.com"
+    }
+  }
+]
